@@ -1,7 +1,9 @@
 getPlayerInput();
 
 
-if(instance_number(objScreen) > 0){ return; }
+if(instance_number(objScreen) > 0){ 
+	//image_index = 0;
+	return; }
 
 if(dodgeTime < 1){
 	if(strikeCD > 0){ 
@@ -29,7 +31,7 @@ if(pressedJump && jumps > 0 && canJump){
 //if(dodgeTime < 1 && ySpeed == 0 && pressedDodge){
 if(dodgeTime < 1 && pressedDodge){
 	if(ySpeed != 0){ airDodges --; }
-	dodgeTime = 30;
+	dodgeTime = 30; /////
 	//ySpeed = -6; xSpeed = getDir(image_xscale) * -12;
 	ySpeed = 0; xSpeed = 0;
 	onLadder = false;
@@ -85,6 +87,18 @@ event_inherited();
 
 
 
+if(pressedCast){
+	pressedCast = false;
+	pressedOk = false;
+	sprite_index = imgPlayerCasting;
+	instance_create_depth(0, 0, ww.layerS, objScreenCast);
+	return;
+}
+
+
+
+
+
 
 
 var closestFoe = noone;
@@ -117,7 +131,15 @@ if(closestFoe != noone){
 
 
 
+if(hpCD > 0){ hpCD --; } else {
+	hpCD = hpCDMax;
+	hp = clamp(hp + 1, 0, hpMax);
+}
 
+if(mpCD > 0){ mpCD --; } else {
+	mpCD = mpCDMax;
+	mp = clamp(mp + 1, 0, mpMax);
+}
 
 
 
@@ -126,6 +148,14 @@ if(dodgeTime > 0){ dodgeTime --; }
 if(strikeCD > 0){ strikeCD --; }
 if(hurtTime > 0){ hurtTime --; }
 if(dropTime > 0){ dropTime --; }
+if(doorCD > 0){ doorCD --; }
+
+if(axeTime > 0){
+	axeTime --;
+	if(axeTime % 7 == 0){
+		instance_create_depth(x, y - head, ww.layerE, objPlayerAxe);
+	}
+}
 
 
 var f = imgPlayer;

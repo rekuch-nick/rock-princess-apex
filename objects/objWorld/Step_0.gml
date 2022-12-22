@@ -5,6 +5,11 @@
 if(instance_number(objScreen) > 0){ return; }
 
 
+
+
+
+/*
+if(room != Room1){ return; }
 if(spawnCD > 0){
 	spawnCD --;
 } else {
@@ -23,3 +28,4 @@ if(spawnCD > 0){
 	}
 	
 }
+*/

@@ -1,2 +1,4 @@
 event_inherited();
-goto = Room2;
+goto = Room3Endless;
+xx = 90;
+yy = 640;

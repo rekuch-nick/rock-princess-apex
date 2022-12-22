@@ -6,7 +6,7 @@ function characterOnGround(){
 	var block = noone;
 	block = pointInBlock(x, y + 1);
 	if(block == noone){
-		block = pointInBlock(x + (xFat * -1), y + 1 );
+		block = pointInBlock(x + (xFat * 1), y + 1 );
 	}
 	if(block == noone){
 		block = pointInBlock(x + (xFat * -1), y + 1 );

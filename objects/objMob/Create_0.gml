@@ -32,6 +32,8 @@ shotType = noone;
 strikeCDMax = 0;
 strikeCDLow = 0;
 strikeCD = strikeCDMax;
+strikeCDRollMod = 2;
+yShotMod = 0;
 
 baseFrame = sprite_index;
 readyFrame = sprite_index;

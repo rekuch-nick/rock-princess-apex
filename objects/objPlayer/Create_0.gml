@@ -9,6 +9,7 @@ holdingDodgeTime = 0;
 
 
 moveSpeed = 7;
+//moveSpeed = 14; //
 
 xSpeed = 0;
 ySpeed = 0;
@@ -35,7 +36,34 @@ hurtTimeMax = 30;
 
 hp = 20;
 hpMax = 20;
+hpCDMax = 120;
+hpCD = hpCDMax;
+mp = 20;
+mpMax = 20
+mpCDMax = 120;
+mpCD = mpCDMax;
+
 pow = 1;
 bumpPow = 10;
 removeOnCollision = false;
 deflectEffect = noone;
+doorCD = 0;
+
+
+spells = [
+	iconSpellAxe,
+	iconSpell01,
+	iconSpell01,
+	iconSpell01,
+	iconSpell01,
+	iconSpell01
+];
+
+spellCost = [8, 10, 12, 14, 14, 20];
+spellLevel = [1, 1, 1, 1, 1, 1];
+
+spell = 0;
+
+
+axeTime = 0;
+

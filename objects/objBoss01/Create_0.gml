@@ -8,6 +8,9 @@ shotType = objBossSword;
 strikeCDMax = 150;
 strikeCDLow = 30;
 strikeCD = strikeCDMax;
+yShotMod = -96;
+
+
 
 jumpChance = 0;
 

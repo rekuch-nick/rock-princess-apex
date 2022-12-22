@@ -1,4 +1,4 @@
-if(instance_number(objScreen) > 0){ return; }
+if(instance_number(objScreen) > 0){ image_index = 0; return; }
 
 if(hp < 1){
 	instance_destroy();
@@ -39,16 +39,16 @@ event_inherited();
 
 
 
-if(strikeCDMax != 0){
+if(shotType != noone){
 	if(strikeCD > 0){
 		strikeCD --;
 	} else {
-		strikeCD = irandom_range(strikeCDMax / 2, strikeCDMax);
+		strikeCD = irandom_range(strikeCDMax / strikeCDRollMod, strikeCDMax);
 	
 	
-		var yo = y - 128;
-		
-		instance_create_depth(x, yo + 32, ww.layerE, objBossSword);
+		var yo = y + yShotMod;
+		//instance_create_depth(x, yo + 32, ww.layerE, shotType);
+		instance_create_depth(x, yo, ww.layerE, shotType);
 	
 	
 	}
