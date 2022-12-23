@@ -9,6 +9,8 @@ yPush = 0;
 hurtTime = 0;
 hurtTimeMax = 0;
 dodgeTime = 0;
+xt = 0; yt = 0;
+grav = 1;
 
 moveSpeed = 2;
 speedRange = 0;
@@ -34,6 +36,8 @@ strikeCDLow = 0;
 strikeCD = strikeCDMax;
 strikeCDRollMod = 2;
 yShotMod = 0;
+
+fly = false;
 
 baseFrame = sprite_index;
 readyFrame = sprite_index;

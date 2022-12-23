@@ -22,6 +22,15 @@ if(thinkCD > 0){
 		if(abs(xDisToPlater - closeToRange) < 20){ xSpeed = 0; }
 	}
 	
+	if(fly){
+		xt = pc.x + choose(-1, 1) * closeToRange;
+		yt = pc.y - closeToRange;
+		
+		var angle = arctan2(yt - y, xt - x);
+		xSpeed = cos(angle) * moveSpeed;
+		ySpeed = sin(angle) * moveSpeed;
+	}
+	
 	if(irandom_range(0, 99) < jumpChance){ ySpeed = jumpPower; }
 	
 }

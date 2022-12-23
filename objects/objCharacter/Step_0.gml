@@ -34,7 +34,7 @@ if(characterOnGround() != noone || onLadder){
 	
 	
 	if(jumps == jumpsMax){ jumps --; }
-	ySpeed ++;
+	ySpeed += grav;
 	
 	
 	if(dodgeTime > 0){ ySpeed ++; }

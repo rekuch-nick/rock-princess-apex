@@ -15,6 +15,7 @@ xSpeed = 0;
 ySpeed = 0;
 xPush = 0;
 yPush = 0;
+grav = 1;
 
 xFat = 30;
 head = 90;
