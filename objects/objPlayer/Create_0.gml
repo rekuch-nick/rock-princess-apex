@@ -49,7 +49,10 @@ bumpPow = 10;
 removeOnCollision = false;
 deflectEffect = noone;
 doorCD = 0;
-
+sheilder = false;
+shieldUp = false;
+isShieldable = false;
+face = 1;
 
 spells = [
 	iconSpellAxe,

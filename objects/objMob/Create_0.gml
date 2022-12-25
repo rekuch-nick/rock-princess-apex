@@ -53,3 +53,9 @@ hp = 12;
 pow = 1;
 bumpPow = 10;
 deflectEffect = noone;
+
+sheilder = false;
+shieldUp = false;
+baseSheildUpFrame = sprite_index;
+baseSheildUpReadyFrame = sprite_index;
+isShieldable = false;

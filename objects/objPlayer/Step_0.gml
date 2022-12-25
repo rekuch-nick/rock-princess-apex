@@ -17,6 +17,7 @@ if(dodgeTime < 1){
 
 if(xIn < 0 && image_xscale > 0){ image_xscale *= -1; }
 if(xIn > 0 && image_xscale < 0){ image_xscale *= -1; }
+face = getDir(image_xscale);
 
 
 if(pressedJump && jumps > 0 && canJump){

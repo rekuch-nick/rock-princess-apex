@@ -15,3 +15,4 @@ bumpPow = 10;
 pushStone = false;
 
 deflectEffect = noone;
+isShieldable = true;

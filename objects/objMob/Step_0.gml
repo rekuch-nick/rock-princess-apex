@@ -65,10 +65,17 @@ if(shotType != noone){
 
 
 
+if(sheilder && irandom_range(0, 60) == 1){ shieldUp = !shieldUp; }
+
+
 if(hurtTime > 0){ hurtTime --; }
 
 
 var f = baseFrame;
 if(strikeCD < strikeCDLow){ f = readyFrame; }
+if(sheilder && shieldUp){
+	if(f == baseFrame){ f = baseSheildUpFrame; }
+	if(f == readyFrame){ f = baseSheildUpReadyFrame; }
+}
 sprite_index = f;
 

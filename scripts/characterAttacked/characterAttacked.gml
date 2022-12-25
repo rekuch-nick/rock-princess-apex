@@ -5,6 +5,25 @@ function characterAttacked(c, o){
 	
 	if(c.hurtTime > 0){ hitHappens = false; }
 	
+	
+	if(c.sheilder && o.isShieldable){
+		if( (c.face == -1 && c.x > o.x) || (c.face == 1 && c.x < o.x) ){
+			var yLine = c.y - 64;
+			
+			if( (o.y < yLine && c.shieldUp) || (o.y > yLine && !c.shieldUp) ){
+				hitHappens = false;
+			
+				if(o.deflectEffect != noone){ instance_create_depth(o.x, o.y, ww.layerE, o.deflectEffect); }
+				if(o.removeOnCollision){ instance_destroy(o); } //
+				
+			}
+			
+			
+		}
+	}
+	
+	
+	
 	if(c.dodgeTime > 0){
 		hitHappens = false;
 		
